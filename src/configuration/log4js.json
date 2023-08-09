@@ -1,0 +1,15 @@
+{
+  "appenders": {
+    "STDOUT": {
+      "type": "console"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "STDOUT"
+      ],
+      "level": "info"
+    }
+  }
+}
