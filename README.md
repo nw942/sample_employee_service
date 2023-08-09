@@ -2,12 +2,12 @@
 Example backend service that works with My-App-Frontend Next.js React application
 
 ## Building and Running
-`npm install` to install all dependencies.
-`npm run compile` to compile the typescript.
-`npm start` to run the service.
-`npm run all` to compile the typescript and run the service.
-`npm run test` to run a suite of tests against a server.
-`npm publish` to build and publish to the npm registry.
+ - npm install` to install all dependencies.
+ - `npm run compile` to compile the typescript.
+ - `npm start` to run the service.
+ - `npm run all` to compile the typescript and run the service.
+ - `npm run test` to run a suite of tests against a server.
+ - `npm publish` to build and publish to the npm registry.
 
 ## Configuration
 
