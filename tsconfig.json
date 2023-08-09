@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "dist",
+    "strict": false,
+    "strictNullChecks": true,
+    "lib": ["es2017","dom"],
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "resolveJsonModule" : true
+  },
+  "include": ["src/**/*", "src/**/*.json", "test/**/*", "test/**/*.json"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,28 @@
+
+I did not have time to add the following code into the DAO layer to detect mid-air collisions when updating a record.
+
+        if (process.env.OPTIMISTIC_LOCKING)
+        {
+            // Check that we do not have a mid-air collision.
+            const employeeInDatabase = await this.service.getEmployee(id);
+            if (!employeeInDatabase) {
+                log.info("No employees found");
+                response.sendStatus(404);
+            } else {
+                const hash = etag(JSON.stringify(employeeInDatabase))
+                log.info("Employee found with hash " + hash);
+
+                if (ifMatch.startsWith("W")) {
+                    ifMatch = ifMatch.substring(2)
+                }
+
+                if (ifMatch === hash) {
+                    log.info("ETag matches hash of stored record");
+                }
+                else {
+                    log.error("ETag does not match hash of stored record " + ifMatch + " - " + hash);
+                    
+                    return response.status(409).send();
+                }
+            }
+        }
